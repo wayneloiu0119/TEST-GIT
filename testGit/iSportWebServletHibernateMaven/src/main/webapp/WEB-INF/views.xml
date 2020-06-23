@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- /////////////////////////////////////////////////////////////////////////////// -->
+	<bean id="cartTest"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/_cartTest.jsp"></property>
+	</bean>
+
+	<bean id="CartContent"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/_ShowCartContent.jsp"></property>
+	</bean>
+
+	<bean id="course_front"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/course_front.jsp"></property>
+	</bean>
+
+	<!-- /////////////////////////////////////////////////////////////////////////////// -->
+	<bean id="blobEx.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blobEx.jsp"></property>
+	</bean>
+
+	<bean id="blobEx.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blobEx_display.jsp"></property>
+	</bean>
+	<bean id="oredersList.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ordersList.jsp"></property>
+	</bean>
+
+	<bean id="oredersList.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ordersList_display.jsp"></property>
+	</bean>
+
+	<bean id="shoppingCart.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/shoppingCart.jsp"></property>
+	</bean>
+
+	<bean id="shoppingCart.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/shoppingCart_display.jsp"></property>
+	</bean>
+
+	<bean id="type.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/type.jsp"></property>
+	</bean>
+
+	<bean id="type.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/type_display.jsp"></property>
+	</bean>
+
+	<!-- //////////////////////////////子豪///////////////////////////////////////// -->
+	<bean id="orders.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/orders.jsp"></property>
+	</bean>
+	<bean id="orders.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/orders_display.jsp"></property>
+	</bean>
+
+	<bean id="course.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/course.jsp"></property>
+	</bean>
+	<bean id="course.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/course_display.jsp"></property>
+	</bean>
+	<bean id="calendar.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/calendar.jsp"></property>
+	</bean>
+	<bean id="calendar.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/calendar_display.jsp"></property>
+	</bean>
+
+	<!-- //////////////////////////////有註///////////////////////////////////////// -->
+	<!-- Commercail Table -->
+	<bean id="comm.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/CommercialCRUD.jsp"></property>
+	</bean>
+	<bean id="comm.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowCommercial.jsp"></property>
+	</bean>
+
+	<!-- Game Table -->
+	<bean id="game.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/GameCRUD.jsp"></property>
+	</bean>
+	<bean id="game.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowGame.jsp"></property>
+	</bean>
+
+	<bean id="gameManager.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowGameManager.jsp"></property>
+	</bean>
+
+	<!-- GameList Table -->
+	<bean id="gameList.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/JoinQuitGame.jsp"></property>
+	</bean>
+	<bean id="gameList.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowGameMember.jsp"></property>
+	</bean>
+
+	<bean id="gameList.manager"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowGameMemberManager.jsp"></property>
+	</bean>
+
+	<!-- Party Tabel -->
+	<bean id="party.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/PartyCRUD.jsp"></property>
+	</bean>
+	<bean id="party.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowParty.jsp"></property>
+	</bean>
+
+	<bean id="partyMan.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowPartyMan.jsp"></property>
+	</bean>
+
+
+	<!-- PartyList Table -->
+	<bean id="partyList.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/JoinQuitParty.jsp"></property>
+	</bean>
+
+	<bean id="partyList.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowPartyMemeber.jsp"></property>
+	</bean>
+
+	<bean id="partyListManager.succe"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/ShowPartyMemeberMangaer.jsp"></property>
+	</bean>
+<!-- 	///////////////////////////////////////////////////////////////////////9637/ -->
+	<bean id="announcement.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcement.jsp"></property>
+	</bean>
+	<bean id="announcement.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcement_display.jsp"></property>
+	</bean>
+	
+	<bean id="blackFriend.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriend.jsp"></property>
+	</bean>
+	<bean id="blcakFriendSelectType.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blcakFriendSelectType.jsp"></property>
+	</bean>
+	<bean id="blackFriend.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriend_display.jsp"></property>
+	</bean>
+	
+		<bean id="blackFriendSelectMemberId.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriendSelectMemberId.jsp"></property>
+	</bean>
+
+	<bean id="message.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/message.jsp"></property>
+	</bean>
+	<bean id="message.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/message_display.jsp"></property>
+	</bean>
+	<bean id="messageSelectMemberId.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/messageSelectMemberId.jsp"></property>
+	</bean>
+	
+	
+	<bean id="announcementSelectGameId.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcementSelectGameId.jsp"></property>
+	</bean>
+	<bean id="announcementSelectGame.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcementSelectGame.jsp"></property>
+	</bean>
+		<bean id="announcementSelectCourseId.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcementSelectCourseId.jsp"></property>
+	</bean>
+	<bean id="announcementSelectCourse.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/announcementSelectCourse.jsp"></property>
+	</bean>
+	
+	<bean id="blackFriendMemberSelect.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriendMemberSelect.jsp"></property>
+	</bean>
+	
+	<bean id="blackFriendMenberIdSelect.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriendMenberIdSelect.jsp"></property>
+	</bean>
+	
+	<bean id="blackFriendMemberTypeSelect.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/blackFriendMemberIdTypeSelect.jsp"></property>
+	</bean>
+	
+	<bean id="messageMemberSelect.error"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/messageMemberSelect.jsp"></property>
+	</bean>
+	
+	<bean id="messageMemberIdDelete.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/messageMemberSelectAll.jsp"></property>
+	</bean>
+	
+	<bean id="messageMyMemberId.select"
+		class="org.springframework.web.servlet.view.InternalResourceView">
+		<property name="url" value="/pages/messageMyMemberId.jsp"></property>
+	</bean>
+
+</beans>

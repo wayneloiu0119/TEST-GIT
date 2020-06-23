@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!--SQL方言,以下使用SQLServer -->
+		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="hibernate.current_session_context_class">thread</property>
+
+		<!--是否要顯示實際操作資料庫時的SQL -->
+		<property name="show_sql">true</property>
+		<!-- <property name="format_sql">true</property> -->
+		<!-- 自動建立table -->
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+
+		<!-- 物件與資料庫表格映射文件，mapping屬性改class，值為類別全名 -->
+		<mapping class="model.bean.ShoppingCartBean" />
+		<mapping class="model.bean.OrdersListBean" />
+		<mapping class="model.bean.TypeBean" />
+		<mapping class="model.bean.BlobExBean" />
+		<mapping class="model.bean.CalendarBean" />
+		<mapping class="model.bean.CourseBean" />
+		<mapping class="model.bean.OrdersBean" />
+		<mapping class="model.bean.CommercialBean" />
+		<mapping class="model.bean.GameBean" />
+		<mapping class="model.bean.GameListBean" />
+		<mapping class="model.bean.PartyBean" />
+		<mapping class="model.bean.PartyListBean" />
+		<mapping class="model.bean.AnnouncementBean" />
+		<mapping class="model.bean.BlackFriendBean" />
+		<mapping class="model.bean.MessageBean" />
+
+		<!-- 資料庫連線 -->
+		<!-- <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property> 
+			<property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;database=iSport</property> 
+			<property name="hibernate.connection.username">sa</property> <property name="hibernate.connection.password">sa123456</property> -->
+	</session-factory>
+</hibernate-configuration>
