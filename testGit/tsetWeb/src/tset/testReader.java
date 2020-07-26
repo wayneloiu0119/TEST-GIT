@@ -65,7 +65,7 @@ public class testReader {
 				      //可自行變化成存入陣列或arrayList方便之後存取
 		}
 				
-				
+				//
 				Object v0 = allpput.get(0).get("data4");
 				String[] v1 = (String[]) allpput.get(1).get("data4");
 				Object v2 = allpput.get(2).get("data4");
@@ -74,7 +74,8 @@ public class testReader {
 				//Pattern pattern=Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$"); // 判斷小數點后2位的數字的正則表達式
 				String cccc = v1[0];
 				System.out.println(cccc);
-				Pattern pattern = Pattern.compile("\\d{1}.\\d{8}");
+				Pattern pattern = Pattern.compile("^[0-9](.[0-9]{8})?$");
+				//Pattern pattern = Pattern.compile("\\d{1}.\\d{8}");
 				
 				Matcher matcher = pattern.matcher(cccc);
 				
