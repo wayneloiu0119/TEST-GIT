@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<!--使用c標籤需要加入 -->    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +45,7 @@ function checklogin(){
 <font id="fid" color="red" style=display:none>請輸入帳號</font>
 <br>
 密碼:<input type="password" id="pswd" name="pswd">
-<font id="fpw" color="red" style="display:none">請輸入密碼</font>
+<font id="fpw" color="red" style=display:none>請輸入密碼</font>
 <br>
 <!-- <input type="hidden" id = "nowTime" name="nowTime"> -->
 <!-- 不用type=submit 是為了檢核後才能發送表單-->

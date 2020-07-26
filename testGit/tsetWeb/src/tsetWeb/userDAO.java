@@ -6,6 +6,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 
 
 
@@ -119,6 +123,60 @@ public class userDAO  {
 		}
 		
 		return userbn;
+	}
+	
+	
+	public List<userBean> selectUserAll() {
+		
+		List<userBean> result = new ArrayList<userBean>();
+		userBean userbn = null;
+		Connection conn = null;
+		PreparedStatement stmt = null;
+		ResultSet rset = null;
+		StringBuilder sfUserId = new StringBuilder();
+		sfUserId.append("SELECT LIST_ID,USER_ID,USER_NAME,PASSWORD,GEBDER,PHONE,ADDRESS,");
+		sfUserId.append("BIRTHDAY,USER_LEVEL,EMAIL,INSERT_TIME FROM MENBER  ");
+		
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String counUrl = "jdbc:oracle:thin:@localhost:1521:orcl";
+			conn = DriverManager.getConnection(counUrl, "SYSTEM", "123");
+			stmt = conn.prepareStatement(sfUserId.toString());
+			rset = stmt.executeQuery();
+			while(rset.next()) {
+				userbn = new userBean();
+				userbn.setListId(rset.getString("LIST_ID"));
+				userbn.setUserId(rset.getString("USER_ID"));
+				userbn.setUserName(rset.getString("USER_NAME"));
+				userbn.setPswd(rset.getString("PASSWORD"));
+				userbn.setGender(rset.getString("GEBDER"));
+				userbn.setPhone(rset.getInt("PHONE"));
+				userbn.setAddress(rset.getString("ADDRESS"));
+				userbn.setBirthday(rset.getDate("BIRTHDAY"));
+				userbn.setUserLevel(rset.getString("USER_LEVEL"));
+				userbn.setEmail(rset.getString("EMAIL"));
+				userbn.setInsertTime(rset.getDate("INSERT_TIME"));
+				result.add(userbn);	
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				rset.close();
+				stmt.close();
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
+		return result;
 	}
 	
 	
