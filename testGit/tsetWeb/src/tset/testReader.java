@@ -31,7 +31,12 @@ public class testReader {
 			   List<Map> allpput = new ArrayList();
 			   try {
 				   //讀取一整列的資料
-				while((line=reader.readLine())!=null){
+				   int lineNumber = 0; 
+				while((line=reader.readLine()+1)!=null){
+					if(lineNumber == 0 ) {
+						 lineNumber++; 
+				          continue; 
+					 }
 					//利用資料間的逗點區分，放入陣列
 					Map ggbbc = new HashMap();
 				      String item[] = line.split(",");
@@ -85,9 +90,9 @@ public class testReader {
 
 		            System.out.println("matcher.group():\t"+matcher.group());
 
-		        }
+		       
 				
-				
+				}
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
